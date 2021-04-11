@@ -1,0 +1,100 @@
+.caixa{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background: #dcdcdc;
+}
+
+
+.destaques {
+    display: grid;
+    grid-gap:  .2rem;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+    /* calcular a partir de 100vh (tamanho da tela do browser) - tamanho do cabeçalho */
+    height: calc(100vh - 50px);
+}
+
+.destaques__titulo{
+    background: rgba(0, 0, 0, .5);
+    color:#fdfdfd;
+    text-align: center;
+    width: 100%;
+    padding: .6rem;
+}
+
+/* Metodologia BEM: utilizamos o duplo underline __ para indicar que principal é um elemento filho de destaque */
+.destaques__principal {
+    /* Opção para encurtar codigo: */
+    background: url('../img/fortnite.jpg') center / cover no-repeat ;
+    /* background-image: url('../img/fortnite.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;  */
+
+
+     /* Opção para encurtar codigo: */
+     /* 1 parâmetro: onde começa; 2 pr: onde termina */
+    /* grid-column: 1 / 4; */
+    /* O end é exclusivo. então tem que colocar sempre 1+ do que se quer */
+    /* grid-column-start: 1; */
+    /* grid-column-end: 4; */
+
+    grid-row: 1 / 3;
+    /* grid-row-start: 1;
+    grid-row-end: 3; */
+}
+
+/* Seletor nth-child(2) = Segundo filho da classe "destaques" */
+.destaques__secundario:nth-child(2) {
+    background: url('../img/pubg.jpg') center / cover no-repeat;
+    /* grid-column: 4 / 4;
+    grid-row: 1 / 1; */
+}
+
+.destaques__secundario:nth-child(3) {
+    background: url('../img/slack.png') center / cover no-repeat;
+    /* grid-column: 4 / 4;
+    grid-row: 2 / 2; */
+}
+
+.destaques__secundario:nth-child(4) {
+    background: url('../img/whatsapp.png') center / cover no-repeat;
+    /* grid-column: 4 / 4;
+    grid-row: 3 / 3; */
+}
+
+.destaques__secundario:nth-child(5) {
+    background: url('../img/cs-go.jpg') center / cover no-repeat;
+    /* grid-column: 3 / 3;
+    grid-row: 3 / 3; */
+}
+
+.destaques__categorias{
+    /* grid-column: 1 / 3; */
+    grid-row: 3 / 3;
+    
+}
+
+.destaques__categorias___lista{
+    display:flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.destaques__categorias___item {
+    display: flex;
+    align-items: center;
+    background: #fdfdfd;
+    border-left: 5px solid transparent;
+    padding: 1rem;
+    width: 50%;
+    color: #333333;
+
+}
+
+.destaques__categorias___link {
+    color: inherit /*herda do pai.  checa se existem outras propriedades no pai que poderão ser utilizadas ou afetadas, antes que seja atribuído o valor inicial*/
+}
+

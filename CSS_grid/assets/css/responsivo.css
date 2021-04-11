@@ -1,0 +1,118 @@
+/* celulares */
+@media screen and (min-width: 0) {
+
+    /* Seção destaques */
+
+    .destaques__principal, .destaques__categorias {
+        grid-column: 1 / 5;
+    }
+
+    .destaques__secundario:nth-child(2) {
+       display: none;
+       grid-column: none;
+       grid-row: none; 
+    }
+
+    .destaques__secundario:nth-child(3) {
+        display: none;
+        grid-column: none;
+        grid-row: none; 
+     }
+
+     .destaques__secundario:nth-child(4) {
+        display: none;
+        grid-column: none;
+        grid-row: none; 
+     }
+
+     .destaques__secundario:nth-child(5) {
+        display: none;
+        grid-column: none;
+        grid-row: none; 
+     }
+
+     /* Seção Populares */
+
+     .populares__conteudo {
+        flex-direction: column;
+     }
+
+     .populares__card {
+         width: 100%;
+         margin-bottom: 3rem;
+         margin-right: 0;
+         grid-template-rows: 150px auto; /*primeira linha 150px e segunda automatico*/
+     }
+}
+
+/* tablets */
+@media screen and (min-width: 768px) {
+
+    .destaques__principal {
+        grid-column: 1 / 4;
+    }
+
+    .destaques__categorias {
+        grid-column: 1 / 3;
+    }
+
+    .destaques__secundario:nth-child(2) {
+       display: flex;
+       grid-column: 4 / 4;
+       grid-row: 1 / 1; 
+    }
+
+    .destaques__secundario:nth-child(3) {
+        display: flex;
+        grid-column: 4 / 4;
+        grid-row: 2 / 2; 
+     }
+
+     .destaques__secundario:nth-child(4) {
+        display: flex;
+        grid-column:  4 / 4;
+        grid-row: 3 / 3; 
+     }
+
+     .destaques__secundario:nth-child(5) {
+        display: flex;
+        grid-column: 3 / 3;
+        grid-row: 3 / 3; 
+     }
+
+     /* Seção Populares */
+
+     .populares__conteudo {
+        flex-direction: row;
+     }
+
+     .populares__card {
+         width: calc(50% - 1rem);
+         margin-bottom: 3rem;
+         margin-right: 1rem;
+         grid-template-rows: 173px auto; /*primeira linha 173px e segunda automatico*/
+     }
+    
+}
+
+/* desktops mais antigos */
+@media screen and (min-width: 992px) {
+
+     .populares__card {
+        width: calc(33.33% - 1rem);
+     }
+    
+}
+
+/* Tvs e desktops mais recentes
+Quando a largura do site for maior que 1200px, ele aplica os estilos abaixo */
+
+@media screen and (min-width: 1200px) {
+
+    .populares__card {
+        width: calc(20% - 1rem);
+        margin-bottom: 0;
+
+     }
+    
+}
