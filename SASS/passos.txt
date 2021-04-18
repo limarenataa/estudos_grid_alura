@@ -1,0 +1,11 @@
+- baixei o sass via npm globalmente;
+- executar aquivo de compilação: executa sass e transforma em css:
+    sass style.scss:style.css
+    (cria arquivo style.css.map)
+
+- Compilando automaticamente. Fazendo a mesma coisa sem precisar rodar toda hora o comando acima:
+    sass --watch style.scss:style.css
+
+-Após mudar a rota e colocar em pastas:
+
+sass --watch scss/style.scss:css/style.css
